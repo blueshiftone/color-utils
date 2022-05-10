@@ -1,10 +1,12 @@
 {
   "name": "@blueshiftone/color-utils",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Utilities for mixing colors and extracting color brightness",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "publish": "tsc && npm publish --access=public"
