@@ -24,7 +24,7 @@ import { ColorMixer, ColorBrightness } from '@blueshiftone/color-utils'
 const color1 = '#fe45fc'
 const color2 = 'rgba(100, 20, 54, 0.5)'
 
-const combinedColor = new ColorMixer(color1).mix(color2).toString()
+const combinedColor = new ColorMixer(color1).mix(color2)
 
 console.log(combinedColor.toString()) // rgba(177, 44, 153, 1)
 
