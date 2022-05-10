@@ -7,7 +7,7 @@ const cache: { [color: string]: IColorBrightness | null } = {}
 
 // outputs brightness range between 0 and 1
 // accepts a hex, rgb or rgba color string
-export function ColorBrightness(color: string | IRGBA | null, theme: TUITheme = 'light'): IColorBrightness | null {
+export function ColorBrightness(color: string | IRGBA | null, theme: TUITheme = 'light', lightBase?: string, darkBase?: string): IColorBrightness | null {
 
   if (typeof color === 'string') {
     color = toRGBA(color)
@@ -28,8 +28,8 @@ export function ColorBrightness(color: string | IRGBA | null, theme: TUITheme = 
     let alignedWithTheme = false
 
     if (transparency > 0) {
-      const lighterColor = new ColorMixer(color).lighten(transparency)
-      const darkerColor  = new ColorMixer(color).darken(transparency)
+      const lighterColor = new ColorMixer(color, lightBase, darkBase).lighten(transparency)
+      const darkerColor  = new ColorMixer(color, lightBase, darkBase).darken(transparency)
       if (lighterColor && darkerColor) {
         const lightModeBrightness = digitalRGBLuma(lighterColor)
         const darkModeBrightness = digitalRGBLuma(darkerColor)

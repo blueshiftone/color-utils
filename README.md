@@ -33,5 +33,10 @@ const brightness = ColorBrightness(combinedColor)
 console.log(brightness.luma) // 0.37722745098039207
 console.log(brightness.mode) // dark
 
-```
+const currentAppTheme = 'dark'
+const appLightBackground = '#ffffff'
+const appDarkBackground = '#000000'
 
+const brightnessThemed = ColorBrightness(color2, currentAppTheme, appLightBackground, appDarkBackground)
+
+```

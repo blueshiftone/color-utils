@@ -14,7 +14,7 @@ export class ColorMixer {
       throw new Error('Unable to parse the color input')
     }
     const light = toRGBA(lightBase)
-    const dark  = toRGBA(darkBase)    
+    const dark  = toRGBA(darkBase)
     if (!light) throw new Error("Unable to parse the light base color")
     if (!dark) throw new Error("Unable to parse the dark base color")
     this.lightBase = light
