@@ -1,0 +1,25 @@
+{
+  "name": "@blueshiftone/color-utils",
+  "version": "1.0.0",
+  "description": "Utilities for mixing colors and extracting color brightness",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "publish": "tsc && npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blueshiftone/color-utils.git"
+  },
+  "author": "Emmanuel Higgins <emmanuel.higgins@blueshift.one>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blueshiftone/color-utils/issues"
+  },
+  "homepage": "https://github.com/blueshiftone/color-utils#readme",
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
+}
